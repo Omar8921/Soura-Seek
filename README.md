@@ -1,4 +1,4 @@
-# Vector Lens
+# Soura Seek
 
 Image search and captioning with **FastAPI** + **SentenceTransformers**. Stores embeddings in **pgvector** (recommended) or as **float32 BLOBs**. Lightweight HTML/CSS/JS frontend.
 
