@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Search or Caption</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Image Tools</h1>
+
+  <div class="box">
+    <div id="formLike" class="grid" aria-describedby="status">
+      <div class="row" role="radiogroup" aria-label="Mode">
+        <strong>Mode:</strong>
+        <label><input type="radio" name="mode" value="search" checked> Search</label>
+        <label><input type="radio" name="mode" value="caption"> Caption</label>
+      </div>
+
+      <div id="searchSub" class="row" role="radiogroup" aria-label="Search by">
+        <strong>Search by:</strong>
+        <label><input type="radio" name="searchMode" value="desc" checked> Description</label>
+        <label><input type="radio" name="searchMode" value="img"> Image Upload</label>
+      </div>
+
+      <div id="descWrap">
+        <input id="descText" type="text" placeholder="Describe what you're looking for… (e.g., 'roman mosaic with horse')" autocomplete="off">
+      </div>
+
+      <div id="fileWrap" class="hidden">
+        <input id="fileField" type="file" accept="image/*">
+        <img id="preview" class="preview" alt="preview">
+      </div>
+
+      <div class="row">
+        <button id="submitBtn" type="button">Go</button>
+        <span id="status" class="muted" aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="captionBox" class="box hidden" style="margin-top:16px">
+    <h3>Caption</h3>
+    <pre id="captionOut"></pre>
+  </div>
+
+  <div id="resultsBox" class="box hidden" style="margin-top:16px">
+    <h3>Search Results</h3>
+    <div id="resultsGrid"></div>
+  </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
